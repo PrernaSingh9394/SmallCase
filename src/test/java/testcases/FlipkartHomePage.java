@@ -12,7 +12,7 @@ public class FlipkartHomePage extends BasePage
 	{
 		driver.get("https://www.flipkart.com/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		String title=driver.getTitle();
 		System.out.println(title);

@@ -65,7 +65,7 @@ public class AmazonPage {
 		
 		String product_price4=price4.getText();
 		
-		//System.out.println("Price of the Product present in Amazon Cart is :"+product_price4);
+		System.out.println("Price of the Product present in Amazon Cart is :"+product_price4);
 		
 		return product_price4;
 		

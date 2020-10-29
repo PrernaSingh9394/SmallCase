@@ -8,7 +8,7 @@ public class MainPage {
 				
 		String amazon_Price=amaz.amazonGetPrice().trim();
 		
-		System.out.println("Price of the Product present in Amazon Cart is :"+amazon_Price);
+		System.out.println("Original Price of the Product present in Amazon Cart is :"+amazon_Price);
 		
 		amaz.browserQuit1();
 		
@@ -16,11 +16,11 @@ public class MainPage {
 		
 		String flip_Price=flip.flipkartGetPrice();
 		
-		System.out.println("Price of the Product present in Flipkart Cart is :"+flip_Price);
+		String flip_Price1=flip_Price.substring(1);
 		
-		flip.browserQuit();
+		System.out.println("Original Price of the Product present in Flipkart Cart is :"+flip_Price1);
 		
-		if(Double.parseDouble(amazon_Price)>Double.parseDouble(flip_Price))
+		if(Double.parseDouble(amazon_Price)>Double.parseDouble(flip_Price1))
 		{
 			System.out.println("Product Price is cheaper in Flipkart");
 		}
@@ -28,7 +28,7 @@ public class MainPage {
 		{
 			System.out.println("Product Price is cheaper in Amazon");
 		}
-		
+		flip.browserQuit();
 	
 		
 	}

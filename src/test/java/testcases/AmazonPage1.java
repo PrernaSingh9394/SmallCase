@@ -9,7 +9,7 @@ public class AmazonPage1 extends BasePage
 
 	private WebElement searchButton1 = getDriver().findElement(By.xpath("//input[@type='submit' and @value='Go']"));
 	
-	//private WebElement clickProduct1 = getDriver().findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[6]"));
+	private WebElement clickProduct1 = getDriver().findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[6]"));
 	
 	public WebElement getSearchField1()
 	{
@@ -21,7 +21,7 @@ public class AmazonPage1 extends BasePage
 		return searchButton1;
 	}
 	
-	/*public WebElement getproduct1()
+	public WebElement getproduct1()
 	{
 		return clickProduct1;
 	}
@@ -41,5 +41,5 @@ public class AmazonPage1 extends BasePage
 		
 		System.out.println(title3);
 		}
-	}*/
+	}
 }

@@ -18,7 +18,7 @@ public class FlipkartPage {
 
 	public WebDriver driver;
 	
-	public String flipkartGetPrice() throws InterruptedException
+	public String flipkartGetPrice()
 	{	
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
@@ -67,19 +67,17 @@ public class FlipkartPage {
 		driver.findElement(By.xpath("//button[normalize-space()='ADD TO CART']")).click();
 	
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//button[normalize-space()= '+']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//button[normalize-space()= '+']")));
 	
 		//Increase the quantity by 1
 		driver.findElement(By.xpath("//div//button[normalize-space()= '+']")).click();
-		
-		//driver.findElement(By.xpath("(//button[@class='wNrY5O'])[2])")).click();
 		
 		//Get and print the new price
 		WebElement price2=driver.findElement(By.xpath("//span[@class='pMSy0p XU9vZa']"));
 		
 		String product_price2=price2.getText();
 		
-		//System.out.println("Price of the Product present in Flipkart Cart is :"+product_price2);
+		System.out.println("New Price of the Product present in Flipkart Cart is :"+product_price2);
 		
 		return product_price2;
 		
